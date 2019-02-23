@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slider Demo</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/slider.js"></script>
+</head>
+<body>
+<style>
+    .slider-item{
+        font-size:30px;
+        color:#fff;
+        line-height: 300px;
+        text-align: center;
+        display: inline-block;
+    }
+</style>
+<div class="slider">
+    <div class="slider-wrap">
+        <div class="item-container">
+            <div class="slider-item" style="background:rgb(53, 197, 233);">Java</div>
+            <div class="slider-item" style="background:orangered;">C++</div>
+            <div class="slider-item" style="background:blueviolet;">Python</div>
+            <div class="slider-item" style="background:palevioletred;">PHP</div>
+            <div class="slider-item" style="background:rgb(219, 16, 84);">JavaScript</div>
+            <div class="slider-item" style="background:rgb(59, 230, 68);">ASP</div>
+            <div class="slider-item" style="background:rgb(209, 224, 74);">.NET</div>
+        </div>
+        <div class="slider-index"></div>
+        <div class="slider-previous">&lsaquo;</div>
+        <div class="slider-next">&rsaquo;</div>
+    </div>
+</div>
+<script>
+window.onload = function(){
+    var sliderWrap = document.querySelector(".slider-wrap");
+    var slider = new Slider({
+        node: sliderWrap,
+        auto: true,
+        // width: 500,
+    });
+
+    slider.start();
+}
+</script>
+</body>
+</html>
